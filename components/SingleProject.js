@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export default function SingleProject({ project }) {
-  const [color, setColor] = useState(``);
+  const [color, setColor] = useState(`to-green-300`);
   useEffect(() => {
     setColor(`${project.color}`);
   }, [project]);
