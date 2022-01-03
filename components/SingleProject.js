@@ -23,6 +23,7 @@ export default function SingleProject({ project }) {
           <a
             href={project.link}
             target='_blank'
+            rel='noopener noreferrer'
             className='text-black px-8  py-2 text-lg capitalize rounded-xl border-2 border-black w-fit hover:bg-black hover:text-white duration-700 transition-all ease-in-out'
           >
             view site
