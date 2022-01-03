@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function SingleProject({ project }) {
-  const [color, setColor] = useState(project.color);
+  const [color, setColor] = useState(``);
+  useEffect(() => {
+    setColor(`${project.color}`);
+  }, [project]);
 
   return (
     <section className='flex flex-col items-center gap-16 '>
       <div
-        className={`text-white w-full py-16 bg-gradient-to-b lg:bg-gradient-to-r px-4 md:px-28 lg:px-40 from-gray-900 ${color} flex lg:flex-row flex-col gap-8  overflow-hidden lg:justify-between lg:items-center lg:gap-60`}
+        className={`text-white w-full py-16 bg-gradient-to-b from-gray-900 ${color} lg:bg-gradient-to-r px-4 md:px-28 lg:px-40  flex lg:flex-row flex-col gap-8  overflow-hidden lg:justify-between lg:items-center lg:gap-60`}
       >
         <div className='flex flex-col gap-8 lg:gap-16 '>
           <div className='flex items-center justify-center gap-4 p-4 border-b-2 w-fit '>
