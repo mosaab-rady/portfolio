@@ -20,6 +20,7 @@ export default function Overview() {
             height={200}
             src={'/imgs/mosaab.jpg'}
             className='rounded-full '
+            alt=''
           />
         </div>
         <div className='flex flex-col gap-4 md:gap-8 max-w-lg items-center md:items-baseline'>
@@ -36,6 +37,7 @@ export default function Overview() {
           <a
             href='https://www.facebook.com/mosp.rady'
             target='_blank'
+            rel='noopener noreferrer'
             className=' group flex items-center gap-2 cursor-pointer w-fit  '
           >
             <FacebookIcon />
@@ -52,6 +54,7 @@ export default function Overview() {
           <a
             href='https://www.linkedin.com/in/mosaab-radi-590610206/'
             target='_blank'
+            rel='noopener noreferrer'
             className=' group flex items-center gap-2 cursor-pointer w-fit '
           >
             <LinkedInIcon />
@@ -62,6 +65,7 @@ export default function Overview() {
           <a
             href='https://github.com/mosaab-rady'
             target={'_blank'}
+            rel='noopener noreferrer'
             className=' group flex items-center gap-2 cursor-pointer w-fit '
           >
             <GitHubIcon />

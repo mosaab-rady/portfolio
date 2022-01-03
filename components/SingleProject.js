@@ -41,7 +41,7 @@ export default function SingleProject({ project }) {
           description
         </h1>
         <p className='text-base md:text-lg lg:text-xl'>
-          '' {project.description} ,,
+          {`'' ${project.description} ,,`}
         </p>
       </div>
     </section>

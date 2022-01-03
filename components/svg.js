@@ -38,7 +38,6 @@ export const GitHubIcon = () => {
     >
       <path
         d='M30.5 16C30.5 24.5755 23.7694 31.5 15.5 31.5C7.23057 31.5 0.5 24.5755 0.5 16C0.5 7.4245 7.23057 0.5 15.5 0.5C23.7694 0.5 30.5 7.4245 30.5 16Z'
-        fill='#FFFDFD'
         stroke='black'
         fill='black'
         className='group-hover:fill-white'
