@@ -2,13 +2,9 @@ import Head from 'next/head';
 import Overview from '../components/Overview';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
-import { skills } from '../lib/data';
-import mongoose from 'mongoose';
+// import { skills, projects } from '../lib/data';
 
-import Project from '../db/models/projectModel';
-import { conectDB } from '../db/config';
-
-export default function Home({ skillsData, projects }) {
+export default function Home() {
   return (
     <div className='font-sans' id='App'>
       <Head>
@@ -27,26 +23,10 @@ export default function Home({ skillsData, projects }) {
         {/* overview */}
         <Overview />
         {/* skills */}
-        <Skills data={skillsData} />
+        <Skills />
         {/* projects */}
-        <Projects projects={JSON.parse(projects)} />
+        <Projects />
       </main>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const skillsData = skills;
-
-  await conectDB();
-
-  const projects = await mongoose.model('Project').find();
-  // const projects = await Project.find();
-
-  return {
-    props: {
-      skillsData,
-      projects: JSON.stringify(projects),
-    },
-  };
 }

@@ -1,6 +1,7 @@
-import Image from 'next/image';
+import { skills as data } from '../lib/data';
 
-export default function Skills({ data }) {
+export default function Skills() {
+  // const data = skills;
   return (
     <div className='w-full flex flex-col items-center gap-8 md:gap-12 px-8 md:px-32 lg:px-40'>
       <h1 className='text-2xl capitalize font-black italic sm:text-3xl md:text-4xl tracking-wide'>

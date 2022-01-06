@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 
+const colors = [
+  'to-emerlad-400',
+  'to-green-400',
+  'to-red-400',
+  'to-teal-400',
+  'to-amber-400',
+  'to-lime-400',
+  'to-cyan-400',
+  'to-blue-400',
+  'to-yellow-400',
+];
 export default function SingleProject({ project }) {
-  const [color, setColor] = useState(``);
-
-  const colors = [
-    'to-emerlad-400',
-    'to-green-400',
-    'to-red-400',
-    'to-teal-400',
-    'to-amber-400',
-    'to-lime-400',
-    'to-cyan-400',
-  ];
+  const [color, setColor] = useState('');
 
   useEffect(() => {
     setColor(colors[Math.floor(Math.random() * colors.length)]);
@@ -20,17 +21,13 @@ export default function SingleProject({ project }) {
   return (
     <section className='flex flex-col items-center gap-16 '>
       <div
-        className={`text-white w-full py-16  bg-gradient-to-r from-slate-800 ${color}  
-         px-4 md:px-28 lg:px-40  flex lg:flex-row flex-col gap-8  overflow-hidden lg:justify-between lg:items-center lg:gap-60`}
+        className={`text-white w-full py-16  bg-gradient-to-b lg:bg-gradient-to-r from-slate-800
+         ${color} px-4 md:px-28 lg:px-40  flex lg:flex-row flex-col gap-8  overflow-hidden lg:justify-between lg:items-center lg:gap-60`}
       >
         <div className='flex flex-col gap-8 lg:gap-16 '>
-          <div className='flex items-center justify-center gap-4 p-4 border-b-2 w-fit '>
-            <img
-              src={`/api/imgs/${project.logoImage}`}
-              alt=''
-              className='w-16  '
-            />
-            <h1 className='capitalize text-3xl md:text-4xl'>{project.name}</h1>
+          <div className='flex items-center justify-center gap-4 p-4 border-b-2'>
+            <img src={`/imgs/${project.logoImage}`} alt='' className='w-16  ' />
+            <h1 className='capitalize text-3xl '>{project.name}</h1>
           </div>
           <p className='capitalize text-base max-w-md lg:text-lg'>
             {project.summary}
@@ -46,7 +43,7 @@ export default function SingleProject({ project }) {
         </div>
         <div className={`lg:-mr-72  `} id='projectImage'>
           <img
-            src={`/api/imgs/${project.image}`}
+            src={`/imgs/${project.image}`}
             alt=''
             className='rounded-3xl w-auto  '
           />
